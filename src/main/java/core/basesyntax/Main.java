@@ -6,15 +6,17 @@ import core.basesyntax.model.FigureSupplier;
 public class Main {
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[6];
+        final int max = 6;
+
+        Figure[] figures = new Figure[max];
 
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < max / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
 
-        for (int i = 3; i < 6; i++) {
+        for (int i = max / 2; i < max; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
