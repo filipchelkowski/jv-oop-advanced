@@ -10,4 +10,6 @@ public abstract class Figure implements FigureMethods {
     public String getColor() {
         return color;
     }
+
+    public abstract void draw();
 }
